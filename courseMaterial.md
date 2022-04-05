@@ -279,7 +279,7 @@ $ sudo apt update && sudo apt upgrade -y
 
 6. making stuff happen: scripting with php
 ```php
-<?php info ?>
+<?php phpinfo() ?>
 ```
 
 6. django
