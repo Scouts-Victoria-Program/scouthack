@@ -1,7 +1,7 @@
 # PHP - Personal Home Page - then PHP Hypertext Preprocessor
 ## Introduction to PHP
 Think about a website that has a shopping cart - if I visit the website and put $1,000,000 worth of goodies in my shopping cart. Then Luke visits - and breaks it by removing everything <br /><span style="font-size: 32pt; margin: 50%; text-align:center">😱</span><br />
-We are now locked in a battle of me adding my goodies and checking out before Luke removes them - Or we get the server to serve me a different page to Luke. The problem here is that we **have** to serve HTML. So we change the HTML before we send it out. There are many ways to do this - but we are going to look at PHP first. Mainly, because it's *easy*. 
+We are now locked in a battle of me adding my goodies and checking out before Luke removes them - Or we get the server to serve me a different page to Luke. The problem here is that we **have** to serve HTML. So we change the HTML before we send it out. There are many ways to do this - but we are going to look at PHP first. Mainly, because it's *easy*.
 ## How to we make a HTML file PHP?
 Existing files are .html - we change them to .php. That's it. We only inject PHP where something needs to happen. A server like Apache2 will render the PHP for us - but for all the elements that don't change, we just leave it as plain HTML <br />
 <span style="font-size: 32pt; margin: 50%; text-align: center">🙃</span>
@@ -9,9 +9,9 @@ Existing files are .html - we change them to .php. That's it. We only inject PHP
 ## What about when we want to add PHP then?
 PHP uses funky symbols to tell the server when to start and when to stop processing the PHP elements. We start a PHP block using `<?php` and then end it with `?>`. From time to time people might start with only `<?` - this will work a lot of the time but it's a shortcut, it's improper, and after you have spent 30 days developing code on your local machine, you then deploy it to the server and suddenly everything breaks because the server decides no no, you must code properly. So for today I want to see proper `<?php` opens and `?>` closes.
 ## The delimiter ;
-What is a delimiter? In programming languages we need to tell the computer when we have stopped giving it a command. In some languages we start a new line, PHP doesn't care about lines or spaces or things. We simply end a command using the semi-colon. **Just like CSS**. At some point you will forget this - but that's okay. You will get the hang of it. 
+What is a delimiter? In programming languages we need to tell the computer when we have stopped giving it a command. In some languages we start a new line, PHP doesn't care about lines or spaces or things. We simply end a command using the semi-colon. **Just like CSS**. At some point you will forget this - but that's okay. You will get the hang of it.
 ## The first basic command and variables
-The simplest PHP command simply prints some text. We can use `echo` to echo the text. So if I want to display *Hello World* to the user I simply write 
+The simplest PHP command simply prints some text. We can use `echo` to echo the text. So if I want to display *Hello World* to the user I simply write
 ```
 <?php echo("Hello world"); ?>
 ```
@@ -69,18 +69,18 @@ GET is not elegant nor secure because we can all see it, etc. An alternative is 
     <input type="submit" value="Send form" />
 </form>
 ```
-This sends our form to `post.php` with the POST param `user`. 
+This sends our form to `post.php` with the POST param `user`.
 Similar to `GET` params you will need to this time target the `$_POST` array. <br />
 YAY! Data comes through
 ## What are we going to do with the data?!?!
 We could turn it into an email - but this requires an email server as well - or we could store it in a database. But Luke came up with a great idea to save us time, so we are just going to write it to a file!
-## fwrite - file write. 
-To write to a file - we first open a file. We have to tell computers everything so don't assume it knows where we want to store it. We should also close the file - although with only one user it won't be the end of the world if we don't - but we are going to. 
+## fwrite - file write.
+To write to a file - we first open a file. We have to tell computers everything so don't assume it knows where we want to store it. We should also close the file - although with only one user it won't be the end of the world if we don't - but we are going to.
 ```
 $ourFile = fopen('./contact.txt', 'a');
 ```
 The first argument is the filelocation, the second tells us *HOW* to open it - in this case a which stands for append. That way we don't loose any old data
-Assuming we have already stored our data in `$our_text` we can now store it with 
+Assuming we have already stored our data in `$our_text` we can now store it with
 ```
 fwrite($ourFile, $our_text);
 ```
@@ -92,6 +92,6 @@ fwrite($ourFile, $our_text . '\n\n');
 ```
 fclose($ourFile);
 ```
-Now let's try getting a bit more creative. 
-Try and create a contact form with a name, subject, and message. 
+Now let's try getting a bit more creative.
+Try and create a contact form with a name, subject, and message.
 Let me know if you have questions<br /><span style="font-size: 32pt; margin: 50%">😁</span>
