@@ -227,45 +227,55 @@ $ sudo apt update && sudo apt upgrade -y
     $ sudo nano /etc/apache2/sites-available/your-site.conf
     ```
 
-use `nano` to edit your `.conf` file to look like this:
+    use `nano` to edit your `.conf` file to look like this:
 
-```
-gnu nano 4.8        /etc/apache2/sites-available/your-site.conf
-```
+    ```
+    gnu nano 4.8        /etc/apache2/sites-available/your-site.conf
+    ```
 
-```apache
-<virtualhost *:80>
-    # the servername helps direct the web server as to what the web
-    # address being asked about is, and directs the request to the
-    # documentroot path.
+    ```apache
+    <VirtualHost *:80>
+        # The ServerName helps direct the web server as to what the web
+        # address being asked about is, and directs the request to the
+        # DocumentRoot path.
 
-    servername yourname.scouthack.local
-    serveralias yourname.scouthack.local
+        ServerName mattcen.scouthack.local
+        ServerAlias mattcen.scouthack.local
+        ServerAlias mattcen.docker.localhost
 
-    # the documentroot directive tells apache where on your local
-    # filesystem to look for files to serve to the internet
+        # The Directory directive sets permissions and options for a certain file
+        # or directory to allow or restrict access.
 
-    documentroot /var/www/html/yourname.scouthack.local/site/
+        <Directory /data/home/*/public_html>
+                Options Indexes FollowSymLinks
+                AllowOverride None
+                Require all granted
+        </Directory>
 
-    # create entries for where log files should be stored.
+        # The DocumentRoot directive tells apache where on your local
+        # filesystem to look for files to serve to the internet
 
-    errorlog ${apache_log_dir}/error.log
-    customlog ${apache_log_dir}/access.log combined
-</virtualhost>
-```
+        DocumentRoot /data/home/YOURNAME/public_html
 
-            ```
-            ^g get help     ^o write out    ^w where is     ^k cut text     ^j justify      ^c cur pos      m-u undo        m-a mark text
-            ^x exit         ^r read file    ^\ replace      ^u paste text   ^t to spell     ^_ go to line   m-e redo        m-6 copy text
-            ```
+        # Create entries for where log files should be stored.
 
-            hold <kbd>ctrl</kbd>+<kbd>o</kbd> to `^o write out`, or save your file, then <kbd>ctrl</kbd>+<kbd>x</kbd> to `^x exit`
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+    </VirtualHost>
+    ```
 
-            ```bash
-            sudo mkdir -p /var/www/html/yourname.scouthack.local/site/
-            sudo a2ensite yourname.scouthack.local.conf
-            sudo service apache2 start
-            ```
+    ```
+    ^g get help     ^o write out    ^w where is     ^k cut text     ^j justify      ^c cur pos      m-u undo        m-a mark text
+    ^x exit         ^r read file    ^\ replace      ^u paste text   ^t to spell     ^_ go to line   m-e redo        m-6 copy text
+    ```
+
+    hold <kbd>ctrl</kbd>+<kbd>o</kbd> to `^o write out`, or save your file, then <kbd>ctrl</kbd>+<kbd>x</kbd> to `^x exit`
+
+    ```bash
+    sudo mkdir -p /var/www/html/yourname.scouthack.local/site/
+    sudo a2ensite yourname.scouthack.local.conf
+    sudo service apache2 start
+    ```
 
 6. making stuff happen: scripting with php
 ```php
