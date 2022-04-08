@@ -27,7 +27,7 @@
 3. Run app:
 
   ```bash
-  ./website-csv.py
+  ./website.py
   ```
 
 4. Browse to http://localhost:5000
