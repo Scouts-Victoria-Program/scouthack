@@ -3,6 +3,8 @@ from flask import Flask, render_template, request, redirect, url_for
 import csv
 
 app = Flask(__name__)
+fieldnames = ['author', 'idea']
+database = 'programs.csv'
 
 
 @app.route("/")
@@ -18,10 +20,9 @@ def hello(name=None):
 
 @app.route('/program')
 def list_programs():
-    fieldnames = ['author', 'idea']
     programs = []
     try:
-        with open('programs.csv') as csvfile:
+        with open(database) as csvfile:
             csvreader = csv.DictReader(csvfile, fieldnames=fieldnames)
             for row in csvreader:
                 programs.append(row)
@@ -33,16 +34,18 @@ def list_programs():
 
 @app.route('/program/new', methods=['POST', 'GET'])
 def new_program():
-    fieldnames = ['author', 'idea']
     if request.method == 'POST':
         program = {
-            'author': request.form['author'], 'idea': request.form['idea']}
-        with open('programs.csv', 'a') as csvfile:
+            'author': request.form['author'],
+            'idea': request.form['idea']
+        }
+        with open(database, 'a') as csvfile:
             csvwriter = csv.DictWriter(csvfile, fieldnames=fieldnames)
             csvwriter.writerow(program)
 
         return redirect(url_for('list_programs'))
-    return render_template('new_program.html')
+    else:
+        return render_template('new_program.html')
 
 
 if __name__ == "__main__":
