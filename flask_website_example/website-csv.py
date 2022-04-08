@@ -35,7 +35,10 @@ def list_programs():
 @app.route('/program/new', methods=['POST', 'GET'])
 def new_program():
     if request.method == 'POST':
-        program = dict([(f, request.form[f]) for f in fieldnames])
+        program = {
+            'author': request.form['author'],
+            'idea': request.form['idea']
+        }
         with open(database, 'a') as csvfile:
             csvwriter = csv.DictWriter(csvfile, fieldnames=fieldnames)
             csvwriter.writerow(program)
