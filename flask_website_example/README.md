@@ -2,7 +2,7 @@
 
 ## Getting started
 
-1. Set up a Python virtual environment:
+1. From the Flask Website folder, set up a Python virtual environment:
 
   ```bash
   python3 -m venv .venv
