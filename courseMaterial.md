@@ -68,7 +68,7 @@ Then hit <kbd>Enter</kbd>.
 3. https://www.w3.org/
 
 ### bootstrap
-1. [bootstrap 4](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+1. [bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 
 ### git
 
@@ -282,9 +282,10 @@ $ sudo apt update && sudo apt upgrade -y
 <?php phpinfo() ?>
 ```
 
-6. django
-7. wordpress
-8. things we missed that you might want to know:
+6. flask
+7. django
+8. wordpress
+9. things we missed that you might want to know:
     1. ip address mapping using bind9
     2. building more features into your django site
     3. customising your wordpress installation

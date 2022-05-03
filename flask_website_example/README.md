@@ -18,16 +18,16 @@
 
   Note: If you need to deactivate the virtual environment in the current terminal, you can run `deactivate`
 
-2. Install dependencies:
+3. Install dependencies:
 
   ```bash
   pip install -r requirements.txt
   ```
 
-3. Run app:
+4. Run app:
 
   ```bash
   ./website.py
   ```
 
-4. Browse to http://localhost:5000
+5. Browse to http://localhost:5000
