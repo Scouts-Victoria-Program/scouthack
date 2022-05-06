@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en0">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}{% endblock %}</title>
+  <title>{% block title %}Scorpion Patrol | ScoutHack{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome-all.min.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
@@ -21,7 +21,7 @@
         <svg class="bi me-2" width="40" height="32">
           <use xlink:href="#bootstrap"></use>
         </svg>
-        <span class="fs-4">Simple header</span>
+        <span class="fs-4">{% block header_title %}Simple header{% endblock %}</span>
       </a>
 
       <ul class="nav nav-pills">
@@ -31,6 +31,7 @@
     </header>
   </div>
   {% endblock %}
+  {% block content_intro %}{% endblock %}
   {% block before_content %}{% endblock %}
   <div class="container">
     {% block content %}{% endblock %}
