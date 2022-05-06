@@ -1,25 +1,14 @@
-<section class="navigation">
-    <div class="container">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="./index.html"" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <svg class="bi me-2" width="40" height="32">
-            <use xlink:href="#bootstrap"></use>
-            </svg>
-            <span class="fs-4">Scorpion Patrol's Program Adventure</span>
-        </a>
+{% extends 'base.html' %}
 
-        <ul class="nav nav-pills">
-            <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="{{ url_for('list_programs')}}" class="nav-link">Programs</a></li>
-        </ul>
-        </header>
-    </div>
+{% block header_title %}
+    Scorpion Patrol's Program Adventure
+{% endblock %}
 
-<section class="page">
+{% block content %}
     <div class="container">
         <div class="row">
             <div class="col-3">
-                <img src="{{url_for('static', filename='img/scorpion.jpg')}}">
+                <img src="{{url_for('static', filename='img/scorpion.jpg')}}"/>
             </div>
             <div class="col-9">
                 <h3>Welcome to the Scorpion Patrol</h3>
@@ -96,24 +85,4 @@
             </div>
         </div>
     </div>
-</section>
-
-<section class="footer">
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-muted">© 2022 Scouts Victoria</p>
-    
-        <a href="./index.html"
-            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-            <svg class="bi me-2" width="40" height="32">
-            <use xlink:href="#bootstrap"></use>
-            </svg>
-        </a>
-    
-        <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link px-2 text-muted">Home</a></li>
-            <li class="nav-item"><a href="{{ url_for('list_programs')}}" class="nav-link px-2 text-muted">Programs</a></li>
-        </ul>
-        </footer>
-    </div>
-</section>
+{% endblock %}

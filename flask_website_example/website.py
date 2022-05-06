@@ -9,6 +9,10 @@ database = 'programs.csv'
 
 @app.route("/")
 def home():
+    return render_template('patrol.html')
+
+@app.route("/index.html")
+def index():
     return render_template('index.html')
 
 
