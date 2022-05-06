@@ -15,6 +15,12 @@ def home():
 def index():
     return render_template('index.html')
 
+@app.route("/code")
+def code():
+    return render_template('code/index.html')
+@app.route("/course")
+def course():
+    return render_template('code/course.md')
 
 @app.route('/hello/')
 @app.route('/hello/<name>')
