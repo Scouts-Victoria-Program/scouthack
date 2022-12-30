@@ -1,0 +1,10 @@
+kind: pipeline
+name: default
+
+steps:
+
+- name: Compile book
+  image: peaceiris/mdbook:v0.4.25
+  commands:
+    - cd book
+    - mdbook build
