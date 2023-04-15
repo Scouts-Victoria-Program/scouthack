@@ -28,6 +28,8 @@
 
   ```bash
   ./website.py
+  # Or, to run with flask and/or specify a port:
+  flask --app=website run --host=0.0.0.0 --port=80
   ```
 
 5. Browse to http://localhost:5000
