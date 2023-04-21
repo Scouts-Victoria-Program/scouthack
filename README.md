@@ -2,8 +2,6 @@
 
 [courseMaterial.md](courseMaterial.md) is a not-particulary up-to-date guide to help scouts get their dev environment up and running, and an intro to the Linux command line (very little of which they need, because we walk them through the few commands they need as we go).
 
-Any [reference to PHP](php.md) is deprecated, as we've largely switched to Flask.
-
 I don't see instructions for how to get the scouts to build a Flask app in this repo, but it *does* include the [website they'll be building](flask_website_example/), which is a simple [single file](flask_website_example/website.py) app with a handful of HTML templates and static files. This is the *last* thing scouts do on Sunday, after we've taught them HTML and CSS basics.
 
 As far as I know, this is the [latest version of the CSS instructions](css.md).
