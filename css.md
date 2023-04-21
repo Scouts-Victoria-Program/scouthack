@@ -114,16 +114,6 @@ The following CSS has been applied to a simple page. You can view the page at `h
 
 ---
 
-**Best practice** is to have a separate CSS file, for example `style.css`. Like the `table ` example above, if I wanted to change the background color of all pages on my website I would still need to change it in every document.
-
-We then include this in our webpage with a line of code:
-
-```html
-<link rel="stylesheet" href="/css/style.css">
-```
-
-Let's create this file now.
-
 ## Attributes
 There are lots of attributes available, but let's look at a few common ones:
 
@@ -151,3 +141,12 @@ There are lots of attributes available, but let's look at a few common ones:
 Spend a bit of time playing around with adding some CSS to your page.
 
 ---
+**Best practice** is to have a separate CSS file, for example `style.css`. Like the `table ` example above, if I wanted to change the background color of all pages on my website I would still need to change it in every document.
+
+We then include this in our webpage with a line of code:
+
+```html
+<link rel="stylesheet" href="/css/style.css">
+```
+
+Let's create this file now.
