@@ -8,7 +8,7 @@ As far as I know, this is the [latest version of the CSS instructions](css.md).
 
 I don't see any documentation in here for the HTML component, either, but I'm sure there was some somewhere. I'll see if I can dig it up.
 
-Ignore the [book](book/) dir for now. My plan is to tidy up thess `.md` files in the root of the repo and put them into `book/` which can then be generated as HTML using [mdbook](https://rust-lang.github.io/mdBook/), but it's currently just an empty template.
+Ignore the [book](book/) dir for now. My plan is to tidy up these `.md` files in the root of the repo and put them into `book/` which can then be generated as HTML using [mdbook](https://rust-lang.github.io/mdBook/), but it's currently just an empty template.
 
 The structure of the weekend, broadly, is as follows:
 
