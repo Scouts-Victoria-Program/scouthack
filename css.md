@@ -1,19 +1,16 @@
 # CSS
 
-We've got our page layout in HTML, but how do we make it pretty? What's one thing we can add to start making our page look more like other websites you've been to?
+Start this session with a basic HTML skeleton from the previous session with `<div>`s in place for a header, body, and footer.
+
+We have our basic page layout now, how to we make it look pretty?
 
 ## Colors
 
-There are a few ways of telling a computer what color you want:
+Let's talk briefly about colors. Remember that computers can only do what we tell them, so how do we describe _exactly_ the color we want?
 
-- Plain English!
-- Hexadecimal
-- RGB
+We can use plain English - if we just want a simple color like red.
 
-
-### Plain English!
-
-We can _just_ tell the computer we want `color: red;`
+If we want a more specific color we need to use either hexadecimal or RGB.
 
 ### Hexadecimal
 
@@ -31,7 +28,13 @@ So **#FFC09C** means that we want a lot of red, a fair bit of green, and almost 
 
 ### RGB
 
+This breaks the color down into red, green, and blue components 'out of' 255, where 0 is none, and 255 is full.
+
 `color: rgb(123,123,123);`
+
+### How do I work out the numbers?
+
+We have access to a color picker in Visual Studio Code to help pick our colors. There are other tools available and all graphics design programs have ways to select colors.
 
 ---
 
@@ -49,7 +52,7 @@ CSS can be included in HTML in a couple of different ways. One way is to specify
 
 This approach has its downsides though. What if I have lots of tables I want styled the same, but later I decide I want them all to be 90% wide? I have to go and change every one individually! This is why **classes** are important.
 
-Let's put some CSS in the `<head>` section of our HTML document.
+Let's put some CSS in the `<head>` section of our HTML document. By doing this, I can apply some CSS to lots of elements at once, for example all images `<img>` on my page.
 
 ```html
 <head>
@@ -57,11 +60,15 @@ Let's put some CSS in the `<head>` section of our HTML document.
         body {
             background-color: #FFFFCC;
         }
+        img {
+            max-width: 90%;
+        }
     </style>
 </head>
 ```
 
 ---
+
 ## Using CSS
 
 We can apply CSS to a whole document or to specific elements, or types of elements.
@@ -82,11 +89,11 @@ body {
 ```
 
 ## Specific elements
-Specific elements on a page can also have CSS applied using **classes**.
+Specific elements on a page can also have CSS applied using **classes**. I could set some padding, margins, and centre my text on a navigation bar by doing this:
 
 
 ```css
-.my-div {
+.navigation-bar {
     padding: 25px;
     margin: 10px;
     text-align: center;
@@ -115,7 +122,7 @@ The following CSS has been applied to a simple page. You can view the page at `h
 ---
 
 ## Attributes
-There are lots of attributes available, but let's look at a few common ones:
+There are lots of things we can do with CSS, but let's look at a few common ones:
 
 - text color
     - `color: #ffffcc;`
@@ -141,7 +148,7 @@ There are lots of attributes available, but let's look at a few common ones:
 Spend a bit of time playing around with adding some CSS to your page.
 
 ---
-**Best practice** is to have a separate CSS file, for example `style.css`. Like the `table ` example above, if I wanted to change the background color of all pages on my website I would still need to change it in every document.
+**Best practice** is to have a separate CSS file, for example `style.css`. If I specify my CSS in each page individually, if I want to change the background color of my website I would need to change it in every file. By taking this CSS out into a separate CSS file, I can update it once.
 
 We then include this in our webpage with a line of code:
 
@@ -149,4 +156,4 @@ We then include this in our webpage with a line of code:
 <link rel="stylesheet" href="/css/style.css">
 ```
 
-Let's create this file now.
+Let's create this file now. Move the CSS from your `<head>` section into this new file, and add `<link rel="stylesheet" href="/css/style.css">` in its place.
