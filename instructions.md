@@ -153,7 +153,7 @@ Note that when you click the link, the new page will be opened in a file tab ins
 <a href="linked_page.html">description goes here</a>
 ```
 
-> <a href="linked_page.html">description goes here</a>
+> <a href="linked_page.md">description goes here</a>
 
 Now that we can create links between web pages, and add images to them, we have all the tools we need to make a web site (where a "site" is a collection of "pages") with quite a lot of content. Before we start working on that, though, let's just cover off a few other formatting things that will make our pages a bit easier to read.
 
