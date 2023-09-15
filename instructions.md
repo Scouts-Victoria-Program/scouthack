@@ -276,3 +276,9 @@ You can see that it has some bits at the top that tell the computer it's a HTML 
 All the bits we've written so far would appear inside the `<body>` element, which is where the main part of the web page lives.
 
 Now that we've got the basics of HTML, we'll start working on a complete HTML web page example that will be the basis for the website we're making this weekend.
+
+## Renaming our web page
+
+Before we move on, let's rename our `index.html` file to `my-page.html`.
+
+Once we've done that, copy `template.html` to `index.html`. This template will form the basis for the rest of our website.
