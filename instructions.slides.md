@@ -1,3 +1,14 @@
+![](img/network-diagram-crop.png) <!-- .element style="max-height: 750px" -->
+
+---
+
+![](img/network_hardware.jpg) <!-- .element style="max-height: 750px" -->
+
+---
+
+![](img/switch_ports.jpg) <!-- .element style="max-height: 750px" -->
+
+---
 
 # HTML page overview
 
