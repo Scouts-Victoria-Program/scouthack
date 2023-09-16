@@ -307,7 +307,7 @@ index 15e1b59..97c05e3 100644
                  <div id="div_table">
 +                    <h3>Upcoming events</h3>
                      <!-- Table -->
-+                    <table class="table table-striped">
++                    <table>
 +                        <thead>
 +                            <tr>
 +                                <th scope="col">Event</th>
@@ -317,19 +317,19 @@ index 15e1b59..97c05e3 100644
 +                        </thead>
 +                        <tbody>
 +                            <tr>
-+                                <td>ScoutHike</td>
-+                                <td>19-21 May 2023</td>
-+                                <td>Tallarook State Forest</td>
++                                <td>Cuboree 2023</td>
++                                <td>25-29 September 2023</td>
++                                <td>Gilwell Park, Gembrook</td>
 +                            </tr>
 +                            <tr>
-+                                <td>Melbourne Gangshow</td>
-+                                <td>16-24 June 2023</td>
-+                                <td>The Besen Centre, Melbourne</td>
-+                            </tr>
-+                            <tr>
-+                                <td>JOTA 2023</td>
++                                <td>JOTA/JOTI 2023</td>
 +                                <td>20-22 October 2023</td>
-+                                <td>On the Air!</td>
++                                <td>Everywhere!</td>
++                            </tr>
++                            <tr>
++                                <td>Vic Gathering</td>
++                                <td>1-3 December 2023</td>
++                                <td>Mafeking Rover Park</td>
 +                            </tr>
 +                        </tbody>
 +                    </table>
