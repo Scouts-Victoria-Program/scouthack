@@ -10,8 +10,8 @@ Reveal.initialize({
 	controls: false,
 	slideNumber: 'c/t',
 	// TODO: Set presentation duration (in seconds) here
-	totalTime: 25 * 60,
-	defaultTiming: 10,
+	//totalTime: 25 * 60,
+	//defaultTiming: 10,
 	minimumTiming: 5,
 	width: 560 * 2.5,
 	//height: 300 * 2.5,
