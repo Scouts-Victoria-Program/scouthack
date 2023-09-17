@@ -1509,7 +1509,7 @@ index 2d8f350..147e445 100755
 
 Note:
 
-1. Create `templates/new_program.html` extending `base.html, add a form with a
+1. Create `templates/new_program.html` extending `base.html`, add a form with a
    text input, text area, and submit button.
 2. Add a route in `website.py` to point to this template.
 3. Update the "Suggest an Activity" link in `patrol.html` to go to this
