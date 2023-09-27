@@ -1,4 +1,4 @@
-![](img/network-diagram-crop.png) <!-- .element style="max-height: 750px" -->
+![](network-diagram-crop-opt.svg) <!-- .element style="max-height: 750px" -->
 
 ---
 
